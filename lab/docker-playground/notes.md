@@ -48,3 +48,24 @@ Benefits:
 - Backup support
 - Database storage
 - Shared data between containers
+
+## Docker Networks
+
+Created a custom Docker bridge network:
+
+docker network create cybershield-network
+
+Network configuration:
+
+- Subnet: 172.18.0.0/16
+- Gateway: 172.18.0.1
+
+Tested container-to-container communication using ping.
+
+Result:
+
+test1 successfully resolved and reached test2 using Docker DNS.
+
+Key learning:
+
+Containers on the same Docker network can communicate using service names rather than IP addresses.
