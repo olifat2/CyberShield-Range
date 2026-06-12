@@ -95,7 +95,13 @@ sudo docker run hello-world
 
 ## Lessons Learned
 
-(To be completed)
+### Image
+
+Une image est un modèle. Elle sert à créer des conteneurs. L'image ne s'exécute pas.
+
+### Container
+
+Un conteneur est une instance en cours d'exécution d'une image.
 
 ---
 
