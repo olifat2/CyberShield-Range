@@ -69,3 +69,23 @@ test1 successfully resolved and reached test2 using Docker DNS.
 Key learning:
 
 Containers on the same Docker network can communicate using service names rather than IP addresses.
+
+## Docker Compose
+
+Docker Compose allows defining and running multi-container applications.
+
+Example:
+
+docker compose up -d
+
+Benefits:
+
+- Infrastructure as Code
+- Reproducibility
+- Simplified deployments
+- Multi-service orchestration
+
+First service deployed:
+
+- Nginx
+- Port 8081
