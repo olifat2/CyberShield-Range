@@ -413,3 +413,288 @@ The laboratory environment serves as the foundation for future cybersecurity sim
 Status:
 
 CyberShield Range Laboratory Environment successfully initialized.
+
+# Lessons Learned
+
+## Lesson 01 - Docker Installation
+
+### Challenge
+
+Docker was not previously installed on the development environment.
+
+### Solution
+
+Installed Docker Engine and Docker Compose using the official Docker repository.
+
+### Knowledge Acquired
+
+* Docker installation process
+* Package repositories
+* Docker daemon architecture
+
+---
+
+## Lesson 02 - Understanding Images and Containers
+
+### Challenge
+
+Initially confusing Docker images with containers.
+
+### Solution
+
+Practiced with Ubuntu and Nginx images.
+
+### Knowledge Acquired
+
+Image:
+
+```text
+Template
+```
+
+Container:
+
+```text
+Running instance of an image
+```
+
+Relationship:
+
+```text
+Image
+   ↓
+Container
+```
+
+---
+
+## Lesson 03 - Port Mapping
+
+### Challenge
+
+Understanding how services inside containers become accessible from the host.
+
+### Solution
+
+Used Nginx:
+
+```bash
+docker run -d -p 8080:80 nginx
+```
+
+### Knowledge Acquired
+
+```text
+Host Port → Container Port
+```
+
+Example:
+
+```text
+8080 → 80
+```
+
+---
+
+## Lesson 04 - Persistent Storage
+
+### Challenge
+
+Understanding what happens when a container is deleted.
+
+### Solution
+
+Created a Docker volume.
+
+```bash
+docker volume create cybershield-data
+```
+
+Stored test data inside the volume.
+
+### Knowledge Acquired
+
+Containers are ephemeral.
+
+Volumes preserve data.
+
+```text
+Container deleted
+       ↓
+Data survives
+```
+
+---
+
+## Lesson 05 - Docker Networks
+
+### Challenge
+
+Understanding communication between containers.
+
+### Solution
+
+Created a custom network.
+
+```bash
+docker network create cybershield-network
+```
+
+Tested connectivity:
+
+```bash
+ping test2
+```
+
+### Knowledge Acquired
+
+Docker provides:
+
+* Internal DNS
+* Service discovery
+* Network isolation
+
+Example:
+
+```text
+test1
+   ↓
+Docker DNS
+   ↓
+test2
+```
+
+---
+
+## Lesson 06 - Docker Compose
+
+### Challenge
+
+Managing containers individually becomes difficult.
+
+### Solution
+
+Created a Docker Compose configuration.
+
+```yaml
+services:
+  nginx:
+    image: nginx
+```
+
+### Knowledge Acquired
+
+Infrastructure can be described as code.
+
+Benefits:
+
+* Reproducibility
+* Simplicity
+* Version control
+
+---
+
+## Lesson 07 - MySQL Container Deployment
+
+### Challenge
+
+Deploying a database inside Docker.
+
+### Solution
+
+Configured MySQL with environment variables.
+
+### Knowledge Acquired
+
+* Database initialization
+* Environment variables
+* Persistent storage
+* Database users
+
+Example:
+
+```env
+MYSQL_DATABASE=cyberhealth
+MYSQL_USER=cyberuser
+```
+
+---
+
+## Lesson 08 - Laravel Containerization
+
+### Challenge
+
+Running a Laravel application inside Docker.
+
+### Solution
+
+Created:
+
+* Dockerfile
+* Docker Compose configuration
+
+Built custom image:
+
+```bash
+docker compose build
+```
+
+### Knowledge Acquired
+
+* PHP-FPM containers
+* Docker build process
+* Application containerization
+
+---
+
+## Lesson 09 - Slow Docker Builds
+
+### Challenge
+
+Initial image build required a long time.
+
+### Observation
+
+First build:
+
+```text
+~16 minutes
+```
+
+### Cause
+
+* Base image download
+* Dependency installation
+* Empty Docker cache
+
+### Knowledge Acquired
+
+Subsequent builds are faster because Docker reuses cached layers.
+
+---
+
+## Personal Reflection
+
+Current progress demonstrates the transition from:
+
+```text
+Application Development
+```
+
+to:
+
+```text
+Infrastructure Engineering
+```
+
+The project is no longer limited to software development.
+
+It now includes:
+
+* System administration
+* Networking
+* DevOps
+* Containerization
+* Cybersecurity architecture
+
+These competencies are essential for the future CyberShield Range platform.

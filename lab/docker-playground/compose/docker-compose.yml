@@ -1,0 +1,6 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: playground-nginx-compose
+    ports:
+      - "8081:80"

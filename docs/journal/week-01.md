@@ -226,3 +226,36 @@ The project evolved from an academic idea into a structured engineering project 
 The first practical infrastructure components were successfully deployed using Docker, providing the foundation for future cybersecurity laboratories, attack simulations and detection systems.
 
 The project now enters its implementation phase.
+
+# Laravel + MySQL Stack
+
+## Architecture
+
+Laravel Application Container
+↓
+MySQL Database Container
+
+## Technologies
+
+- Ubuntu 24.04 LTS
+- Docker
+- Docker Compose
+- Laravel 9
+- PHP 8.x
+- MySQL 8.4
+
+## Validation
+
+- Laravel container deployed successfully
+- MySQL container deployed successfully
+- Database migrations executed successfully
+- Application connected to database through Docker network
+
+## Lessons Learned
+
+- Docker service discovery
+- Docker volumes
+- Docker networking
+- Laravel containerization
+- MySQL containerization
+- Docker Compose orchestration
